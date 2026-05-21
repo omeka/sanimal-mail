@@ -1,14 +1,16 @@
 {
-    "name": "laminas/laminas-mail",
-    "description": "Provides generalized functionality to compose and send both text and MIME-compliant multipart e-mail messages",
+    "name": "omeka/sanimal-mail",
+    "description": "Provides generalized functionality to compose and send both text and MIME-compliant multipart e-mail messages (fork)",
     "keywords": [
         "laminas",
         "mail"
     ],
-    "homepage": "https://laminas.dev",
     "license": "BSD-3-Clause",
+    "replace": {
+        "laminas/laminas-mail": "2.25.1"
+    },
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "php": "^8.1",
         "ext-iconv": "*",
         "laminas/laminas-loader": "^2.9.0",
         "laminas/laminas-mime": "^2.11.0",
@@ -67,13 +69,5 @@
         "static-analysis": "psalm --shepherd --stats",
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
-    },
-    "support": {
-        "issues": "https://github.com/laminas/laminas-mail/issues",
-        "forum": "https://discourse.laminas.dev",
-        "chat": "https://laminas.dev/chat",
-        "source": "https://github.com/laminas/laminas-mail",
-        "docs": "https://docs.laminas.dev/laminas-mail/",
-        "rss": "https://github.com/laminas/laminas-mail/releases.atom"
     }
 }
